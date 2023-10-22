@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background: mediumaquamarine;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .btn-menu{
+    font-size: 1.5rem;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+  }
+
+  nav ul{
+    display: flex;
+  }
+
+  nav ul li{
+    list-style: none;
+  }
+
+  nav li a{
+    text-decoration: none;
+    color: #333;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    transition: .3s ease;
+  }
+
+  nav li a.hover{
+    color: #ccc;
+  }
+
+  @media only screen and (max-width: 768px) {
+    /*moblie phone*/
+    [class*="col-"]{
+      width: 100%;
+    }
+    nav {
+      background: mediumaquamarine;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .btn-menu{
+      display: block;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+    }
+
+    nav h2{
+      margin: 20px 0;
+    }
+
+    nav ul{
+      width: 100%;
+      background: #fff;
+      display: none;
+      flex-direction: column;
+      transition: .3s ease;
+    }
+
+    nav ul li a{
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .nav-active{
+      display: flex;
+    }
+
+  }
+  
