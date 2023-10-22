@@ -1,16 +1,22 @@
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale1.0">
     <title>My CSTU Passport</title>
-    <link rel="stylesheet" href="css/indexCss.css">
+    <link rel="stylesheet" href="add/new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-
-    <nav>
-      <div>
-        <a> My CSTU Passport </a>
+    <div>
+        <h1> MY ADVISOR </h1>
       </div>
+    <nav>
+      
+      <button class="btn-menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-      <ul id="menu">
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="About.html">About</a></li>
         <li><a href="myActivities.html">Activities</a></li>
@@ -18,18 +24,22 @@
       </ul>
     </nav>
 
-    <section id="banner">
-      <div>
-        <h1>MY ADVISOR</h1>      
-      </div>
-    </section>
-
-    <img src="image/advisorpic.PNG" width="250" height="320">
+    <img src="add/advisorpic.PNG" width="250" height="320">
 
     <footer>
       <p>Asst. Prof. Dr. Monvorath Phongpaibul</p>         
       <p><a href="pmonvora@tu.ac.th">pmonvora@tu.ac.th</a></p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+      <script>
+        $(document).ready(function(){
+          $(".btn-menu").on("click", function(){
+            $("nav ul").toggleClass("nav-active");
+          })
+        });
+      </script>
 
   </body>
 </html>
